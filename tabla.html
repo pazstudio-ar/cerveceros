@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Tabla de posiciones · Cerveceros</title>
+<meta name="description" content="Tabla de posiciones del Torneo Abierto UTN: torneo y anual, divisiones A, B y C.">
+<meta name="theme-color" content="#0E1D37">
+<meta property="og:title" content="Tabla de posiciones · Cerveceros">
+<meta property="og:description" content="Tabla de posiciones del Torneo Abierto UTN: torneo y anual, divisiones A, B y C.">
+<meta property="og:image" content="https://pazstudio-ar.github.io/cerveceros/img/jugador.jpg">
+<meta property="og:url" content="https://pazstudio-ar.github.io/cerveceros/tabla.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<link rel="icon" href="img/escudo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body data-pagina="tabla">
+
+<div class="ticker" id="ticker" aria-hidden="true"></div>
+<header class="nav" id="nav"></header>
+
+<main class="board" style="padding-top:46px">
+  <div class="wrap">
+    <small style="font:700 13px Barlow;letter-spacing:.18em;text-transform:uppercase;color:var(--pale)">Torneo Abierto UTN</small>
+    <h1 class="A" style="font-size:clamp(56px,15vw,120px);line-height:.88;margin:8px 0 26px">Posiciones</h1>
+    <div class="barra" id="barra">
+      <div class="grupo">
+        <div><label for="sel-torneo">Tabla</label><select id="sel-torneo"></select></div>
+        <div><label for="sel-div">División</label><select id="sel-div"></select></div>
+      </div>
+    </div>
+    <div id="contenido"></div>
+  </div>
+</main>
+
+<footer id="pie"></footer>
+
+<script src="js/comun.js" defer></script>
+<script src="js/tabla.js" defer></script>
+</body>
+</html>

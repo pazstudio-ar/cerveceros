@@ -4,228 +4,74 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Cerveceros · Torneo Abierto UTN · Categoría B</title>
-<meta name="description" content="Cerveceros, equipo de fútbol del Torneo Abierto UTN, Categoría B. Resultados, tabla, fixture y novedades del Clausura 2026.">
+<title>Cerveceros · Torneo Abierto UTN</title>
+<meta name="description" content="Cerveceros, equipo de fútbol del Torneo Abierto UTN. Resultados, fixture, tabla, plantel, estadísticas y noticias.">
 <meta name="theme-color" content="#0E1D37">
-<link rel="icon" href="escudo.jpg">
+<meta property="og:title" content="Cerveceros · Torneo Abierto UTN">
+<meta property="og:description" content="Cerveceros, equipo de fútbol del Torneo Abierto UTN. Resultados, fixture, tabla, plantel, estadísticas y noticias.">
+<meta property="og:image" content="https://pazstudio-ar.github.io/cerveceros/img/jugador.jpg">
+<meta property="og:url" content="https://pazstudio-ar.github.io/cerveceros/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<link rel="icon" href="img/escudo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root{--navy:#14284A;--navy2:#0E1D37;--orange:#F07A1A;--cream:#EEF2F7;--ink:#0E1D37;--soft:#5B6475;--line:#CFD8E6}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--cream);color:var(--ink);font:400 17px/1.5 Barlow,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-img{display:block;max-width:100%;height:auto}
-a{color:inherit;text-decoration:none}
-:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
-.A{font-family:Anton,Impact,"Arial Narrow",sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.01em}
-.wrap{max-width:1160px;margin:0 auto;padding:0 18px}
-/* rayas diagonales del escudo */
-.stripes{background:repeating-linear-gradient(-55deg,var(--navy2) 0 18px,#172F55 18px 36px)}
-
-/* barra superior tipo ticker, sin menú */
-.ticker{background:var(--ink);color:#fff;font:600 13px Barlow;letter-spacing:.14em;text-transform:uppercase;overflow:hidden;white-space:nowrap}
-.ticker div{display:inline-flex;gap:36px;padding:10px 0;animation:tk 26s linear infinite}
-.ticker b{color:var(--orange)}
-@keyframes tk{to{transform:translateX(-50%)}}
-
-/* portada partida en dos */
-.hero{display:grid;min-height:calc(100svh - 38px)}
-.h-left{background:var(--navy);color:#fff;padding:28px 18px 34px;display:flex;flex-direction:column;position:relative;overflow:hidden}
-.h-left .crest{width:84px;height:84px;background:#fff;border-radius:50%;display:grid;place-items:center;box-shadow:0 0 0 4px rgba(255,255,255,.18)}
-.h-left .crest img{width:64px}
-.h-left small{display:block;font:700 13px Barlow;letter-spacing:.18em;text-transform:uppercase;margin-top:22px;color:#9FB2D3}
-.h-left h1 span{color:transparent;-webkit-text-stroke:2px rgba(255,255,255,.7)}
-.h-left h1{font-size:clamp(78px,24vw,190px);line-height:.82;margin-top:10px;letter-spacing:-.01em}
-.h-left q{display:block;font:500 italic clamp(19px,4.6vw,24px)/1.35 Barlow;margin-top:22px;max-width:22em;quotes:"“" "”"}
-.h-left q::after{content:"”"}
-.h-left q{color:#C9D5EA;border-left:3px solid var(--orange);padding-left:14px}
-.h-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
-.sq{display:inline-flex;align-items:center;gap:12px;height:52px;padding:0 20px;font:700 15px Barlow;letter-spacing:.1em;text-transform:uppercase;border:2px solid rgba(255,255,255,.6);color:#fff;transition:background .2s,color .2s}
-.sq.f{background:#fff;color:var(--navy);border-color:#fff}
-.sq:hover{background:#fff;color:var(--navy)}
-.sq svg{width:18px;height:18px}
-.h-right{position:relative;min-height:420px;overflow:hidden}
-.h-right{background:#1E4F8C}
-.h-right img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}
-.h-right::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(14,29,55,.85))}
-.score{position:absolute;left:14px;right:14px;bottom:14px;z-index:2;background:#fff;color:var(--ink);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:8px;padding:14px 16px;border-bottom:4px solid var(--orange)}
-.score small{grid-column:1/-1;font:700 11px Barlow;letter-spacing:.16em;text-transform:uppercase;color:var(--soft)}
-.score .t{font:700 15px Barlow;text-transform:uppercase;line-height:1.1}
-.score .t:last-child{text-align:right}
-.score .r{font-size:44px;line-height:1}
-.score .r span{color:var(--orange)}
-
-/* marcadores: carrusel horizontal */
-.sec{padding:64px 0}
-.title{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:22px}
-.title h2{font-size:clamp(46px,12vw,96px);line-height:.88}
-.title p{color:var(--soft);font-size:15px;max-width:16em;text-align:right}
-.rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 18px 18px;margin:0 -18px;scrollbar-width:none}
-.rail::-webkit-scrollbar{display:none}
-.mk{flex:none;width:88%;max-width:340px;scroll-snap-align:start;background:var(--navy);color:#fff;padding:18px;position:relative;overflow:hidden}
-.mk::before{content:"";position:absolute;right:-30px;top:-30px;width:120px;height:120px;background:repeating-linear-gradient(-55deg,rgba(255,255,255,.07) 0 10px,transparent 10px 20px)}
-.mk .f{font:700 12px Barlow;letter-spacing:.16em;text-transform:uppercase;color:#9FB2D3}
-.mk .res{display:flex;align-items:center;justify-content:space-between;margin:18px 0 10px}
-.mk .res b{font:700 13px Barlow;text-transform:uppercase;flex:1;min-width:0;line-height:1.15;letter-spacing:.01em}
-.mk .res b:last-child{text-align:right}
-.mk .n{font-family:Anton,Impact,sans-serif;font-size:42px;line-height:1;white-space:nowrap;padding:0 6px}
-.mk .badge{display:inline-block;font:700 12px Barlow;letter-spacing:.12em;padding:4px 8px;text-transform:uppercase}
-.mk .badge.w{background:var(--orange);color:var(--ink)}
-.mk .badge.l{background:rgba(255,255,255,.12)}
-.mk.cv-w{background:#fff;color:var(--ink);box-shadow:inset 0 0 0 2px var(--navy)}
-.mk.cv-w .f{color:var(--soft)}
-
-/* así venimos: números en fila */
-.nums{display:grid;grid-template-columns:repeat(3,1fr);border-top:2.5px solid var(--ink);border-left:2.5px solid var(--ink)}
-.nums div{border-right:2.5px solid var(--ink);border-bottom:2.5px solid var(--ink);padding:16px 12px}
-.nums b{display:block;font-family:Anton,Impact,sans-serif;font-size:clamp(46px,12vw,80px);line-height:1}
-.nums span{font:700 12px Barlow;letter-spacing:.14em;text-transform:uppercase;color:var(--soft)}
-.nums .hl{background:var(--navy);color:#fff}
-.nums .hl span{color:#9FB2D3}
-
-/* fixture: línea de tiempo */
-.time{list-style:none;position:relative;margin-left:8px}
-.time::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:3px;background:var(--ink)}
-.time li{position:relative;padding:0 0 26px 38px}
-.time li::before{content:"";position:absolute;left:0;top:4px;width:17px;height:17px;background:var(--cream);border:3px solid var(--ink)}
-.time li.win::before{background:var(--navy)}
-.time .f{font:700 12px Barlow;letter-spacing:.16em;text-transform:uppercase;color:var(--soft)}
-.time .m{font-size:clamp(26px,6.6vw,40px);line-height:1.05;margin-top:4px}
-.time .m em{font-style:normal;color:var(--orange)}
-.time .d{color:var(--soft);font-size:15px}
-
-/* tabla */
-.board{background:var(--navy);color:#fff;padding:52px 0 60px}
-.board .title p{color:#9FB2D3}
-.tbl{width:100%;border-collapse:collapse;font:600 15px Barlow}
-.tbl th{font:700 11px Barlow;letter-spacing:.14em;text-transform:uppercase;color:#9FB2D3;text-align:center;padding:8px 4px;border-bottom:1px solid rgba(255,255,255,.15)}
-.tbl th:nth-child(2){text-align:left}
-.tbl td{text-align:center;padding:11px 4px;border-bottom:1px solid rgba(255,255,255,.08)}
-.tbl td:nth-child(2){text-align:left;text-transform:uppercase}
-.tbl td.p{font-family:Anton,Impact,sans-serif;font-size:20px}
-.tbl tr.cv td{background:#fff;color:var(--navy)}
-.tbl tr.cv td:first-child{box-shadow:inset 5px 0 0 var(--orange)}
-.tbl .hide{display:none}
-.note{font-size:13px;color:#9FB2D3;margin-top:14px}
-
-.squad{list-style:none;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0;border-top:2px solid var(--navy)}
-.squad li{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 8px;padding:12px 4px;border-bottom:1px solid var(--line);font-size:15px;min-width:0}
-.squad li span{font:700 12px Barlow;color:var(--soft);letter-spacing:.08em;min-width:20px}
-.squad li b{text-transform:uppercase;font-weight:700}
-@media (min-width:900px){.squad{grid-template-columns:repeat(4,1fr);column-gap:24px}}
-/* frase */
-.quote{position:relative;overflow:hidden;color:#fff;padding:70px 0}
-.quote p{position:relative;font-size:clamp(38px,10vw,92px);line-height:.95}
-.quote p span{color:transparent;-webkit-text-stroke:2px #fff}
-.quote small{display:block;position:relative;margin-top:18px;font:600 14px Barlow;letter-spacing:.14em;text-transform:uppercase;color:#C9D5EA}
-
-.end{padding:60px 0 50px}
-.end h2{font-size:clamp(44px,11vw,88px);line-height:.9}
-.end p{color:var(--soft);margin:12px 0 22px;max-width:30em}
-.wide{display:flex;align-items:center;justify-content:space-between;width:100%;max-width:560px;padding:20px 22px;background:var(--ink);color:#fff;font:700 17px Barlow;letter-spacing:.08em;text-transform:uppercase;border-left:10px solid var(--orange);transition:padding .2s}
-.wide:hover{padding-left:30px}
-.wide svg{width:22px;height:22px}
-footer{border-top:2.5px solid var(--ink);padding:18px 0 28px;font-size:13px;color:var(--soft)}
-footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
-.rv{opacity:0;transform:translateY(22px);transition:opacity .6s,transform .6s}
-.rv.in{opacity:1;transform:none}
-
-@media (min-width:900px){
-  .hero{grid-template-columns:1.05fr .95fr;min-height:640px}
-  .h-left{padding:44px 48px}
-  .h-right{min-height:auto}
-  .mk{width:300px}
-  .nums{grid-template-columns:repeat(6,1fr)}
-  .tbl .hide{display:table-cell}
-  .two{display:grid;grid-template-columns:1fr 1fr;gap:56px}
-}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
-</style>
+<link rel="stylesheet" href="css/estilos.css">
 </head>
-<body>
+<body data-pagina="inicio">
 
-<div class="ticker" aria-hidden="true"><div>
-  <span>Torneo Abierto UTN · <b>Categoría B</b></span><span>Clausura 2026</span><span>Fecha 3 · Floresta 1 — <b>Cerveceros 3</b></span><span>Todos pagamos por jugar</span>
-  <span>Torneo Abierto UTN · <b>Categoría B</b></span><span>Clausura 2026</span><span>Fecha 3 · Floresta 1 — <b>Cerveceros 3</b></span><span>Todos pagamos por jugar</span>
-</div></div>
+<div class="ticker" id="ticker" aria-hidden="true"></div>
+<header class="nav" id="nav"></header>
 
-<header class="hero">
+<section class="hero">
   <div class="h-left">
-    <div class="crest"><img src="escudo.jpg" alt="Escudo de Cerveceros" width="150" height="150"></div>
-    <small>Torneo Abierto UTN · Categoría B</small>
-    <h1 class="A">Cerve<br><span>ceros</span></h1>
-    <q>Muchachos, no se olviden que todos pagamos por jugar; Maradona hubo uno solo.</q>
+    <span class="marca-agua A" aria-hidden="true">CRVC</span>
+    <div class="crest"><img src="img/escudo.jpg" alt="Escudo de Cerveceros" width="96" height="96"></div>
+    <small id="h-sub">Torneo Abierto UTN</small>
+    <h1 class="A">Cerve<span>ceros</span></h1>
+    <q id="h-frase">Muchachos, no se olviden que todos pagamos por jugar; Maradona hubo uno solo.</q>
     <div class="h-cta">
-      <a class="sq f" href="#resultados">Resultados <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <a class="sq" href="#tabla">Tabla</a>
+      <a class="sq f" href="partidos.html">Fixture <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="sq" href="tabla.html">Tabla</a>
     </div>
   </div>
   <div class="h-right">
-    <img src="jugador.jpg" alt="Jugador de Cerveceros con la camiseta azul del equipo" width="560" height="1100">
-    <div class="score">
-      <small>Mejor resultado del Clausura · Fecha 3</small>
-      <span class="t">Floresta FC</span><span class="r A">1 <span>—</span> 3</span><span class="t">Cerveceros</span>
-    </div>
+    <img src="img/jugador.jpg" alt="Jugador de Cerveceros con la camiseta azul del equipo" width="420" height="825">
+    <div class="score" id="score"></div>
   </div>
-</header>
+</section>
 
 <main>
   <section class="sec" id="resultados">
     <div class="wrap">
-      <div class="title rv"><h2 class="A">Marcador<br>final</h2><p>Deslizá para ver todas las fechas del Clausura</p></div>
-      <div class="rail rv">
-        <article class="mk"><span class="f">Fecha 5</span><div class="res"><b>Selección K20</b><span class="n">3-2</span><b>Cerveceros</b></div><span class="badge l">Derrota</span></article>
-        <article class="mk"><span class="f">Fecha 4</span><div class="res"><b>Gandulfa</b><span class="n">2-0</span><b>Cerveceros</b></div><span class="badge l">Derrota</span></article>
-        <article class="mk cv-w"><span class="f">Fecha 3</span><div class="res"><b>Floresta FC</b><span class="n">1-3</span><b>Cerveceros</b></div><span class="badge w">Victoria</span></article>
-        <article class="mk"><span class="f">Fecha 2</span><div class="res"><b>Jamaica</b><span class="n">3-2</span><b>Cerveceros</b></div><span class="badge l">Derrota</span></article>
-        <article class="mk"><span class="f">Fecha 1</span><div class="res"><b>Cerveceros</b><span class="n">2-4</span><b>Pancuca</b></div><span class="badge l">Derrota</span></article>
-      </div>
+      <div class="title rv"><h2 class="A">Marcador<br>final</h2><p id="res-sub"></p></div>
+      <div class="rail rv" id="rail"></div>
+      <a class="more" href="partidos.html">Todos los partidos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
   </section>
 
-  <section class="sec" style="padding-top:0">
+  <section class="sec pt0">
     <div class="wrap">
-      <div class="title rv"><h2 class="A">Así<br>venimos</h2><p>Clausura 2026, primeras 5 fechas</p></div>
-      <div class="nums rv">
-        <div><b data-n="5">5</b><span>Jugados</span></div>
-        <div class="hl"><b data-n="1">1</b><span>Ganados</span></div>
-        <div><b data-n="0">0</b><span>Empatados</span></div>
-        <div><b data-n="4">4</b><span>Perdidos</span></div>
-        <div><b data-n="9">9</b><span>Goles a favor</span></div>
-        <div><b data-n="13">13</b><span>Goles en contra</span></div>
-      </div>
+      <div class="title rv"><h2 class="A">Así<br>venimos</h2><p id="nums-sub"></p></div>
+      <div class="nums rv" id="nums"></div>
+      <a class="more" href="estadisticas.html">Goleadores y estadísticas <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
   </section>
 
-  <section class="sec" id="plantel" style="padding-top:0">
+  <section class="sec pt0" id="convocados-sec">
     <div class="wrap">
-      <div class="title rv"><h2 class="A">Convo<br>cados</h2><p>Lista vs Jamaica · Clausura 2026</p></div>
-      <ol class="squad rv"><li><span>01</span>Rodrigo <b>Lodigiani</b></li><li><span>02</span>Emmanuel <b>Berín</b></li><li><span>03</span>Agustín <b>Mohr</b></li><li><span>04</span>Lautaro <b>Tossici</b></li><li><span>05</span>Nicolás <b>Weber</b></li><li><span>06</span>Agustín <b>Zeballos</b></li><li><span>07</span>Juan <b>Cosmich</b></li><li><span>08</span>Braian <b>Herrera</b></li><li><span>09</span>Gabriel <b>Lugano</b></li><li><span>10</span>Ezequiel <b>Martín</b></li><li><span>11</span>Alan <b>Paz</b></li><li><span>12</span>Agustín <b>Piñeiro</b></li><li><span>13</span>Gaspar <b>Raffin</b></li><li><span>14</span>Ignacio <b>Bover</b></li><li><span>15</span>Mariano <b>Buchardo</b></li><li><span>16</span>Jonathan <b>Jaime</b></li></ol>
+      <div class="title rv"><h2 class="A">Convo<br>cados</h2><p id="conv-sub"></p></div>
+      <div class="rv" id="convocados"></div>
+      <a class="more" href="plantel.html">Ver el plantel <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
   </section>
 
-  <section class="board" id="tabla">
+  <section class="board" id="tabla-sec">
     <div class="wrap">
-      <div class="title rv"><h2 class="A">Tabla</h2><p>Torneo Clausura · División B · fecha 5</p></div>
-      <table class="tbl rv">
-        <thead><tr><th>Pos</th><th>Equipo</th><th>Pts</th><th>PJ</th><th class="hide">G</th><th class="hide">E</th><th class="hide">P</th><th>DG</th></tr></thead>
-        <tbody>
-          <tr><td>1</td><td>Aston Birra</td><td class="p">11</td><td>5</td><td class="hide">3</td><td class="hide">2</td><td class="hide">0</td><td>+8</td></tr>
-          <tr><td>2</td><td>Floresta FC</td><td class="p">10</td><td>5</td><td class="hide">3</td><td class="hide">1</td><td class="hide">1</td><td>+3</td></tr>
-          <tr><td>3</td><td>Selección K20</td><td class="p">9</td><td>4</td><td class="hide">3</td><td class="hide">0</td><td class="hide">1</td><td>+3</td></tr>
-          <tr><td>4</td><td>Jamaica</td><td class="p">9</td><td>5</td><td class="hide">3</td><td class="hide">0</td><td class="hide">2</td><td>+1</td></tr>
-          <tr><td>5</td><td>A los Caños</td><td class="p">9</td><td>5</td><td class="hide">3</td><td class="hide">0</td><td class="hide">2</td><td>-1</td></tr>
-          <tr><td>6</td><td>Villa Devoto</td><td class="p">8</td><td>4</td><td class="hide">2</td><td class="hide">2</td><td class="hide">0</td><td>+8</td></tr>
-          <tr><td>7</td><td>Pancuca</td><td class="p">7</td><td>5</td><td class="hide">2</td><td class="hide">1</td><td class="hide">2</td><td>+2</td></tr>
-          <tr><td>8</td><td>Gandulfa</td><td class="p">7</td><td>5</td><td class="hide">2</td><td class="hide">1</td><td class="hide">2</td><td>0</td></tr>
-          <tr><td>9</td><td>FC Foncu</td><td class="p">6</td><td>4</td><td class="hide">2</td><td class="hide">0</td><td class="hide">2</td><td>-1</td></tr>
-          <tr><td>10</td><td>NVDE</td><td class="p">3</td><td>4</td><td class="hide">1</td><td class="hide">0</td><td class="hide">3</td><td>0</td></tr>
-          <tr class="cv"><td>—</td><td>Cerveceros</td><td class="p">3</td><td>5</td><td class="hide">1</td><td class="hide">0</td><td class="hide">4</td><td>-4</td></tr>
-        </tbody>
-      </table>
-      <p class="note">Datos de la tabla oficial del Torneo Abierto UTN publicada por el equipo. La web se puede actualizar fecha a fecha.</p>
+      <div class="title rv"><h2 class="A">Tabla</h2><p id="tabla-sub"></p></div>
+      <div class="rv" id="tabla"></div>
+      <a class="more" href="tabla.html" style="border-color:#fff">Tabla anual y otras divisiones <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
   </section>
 
@@ -233,41 +79,36 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
     <div class="wrap two">
       <div>
         <div class="title rv"><h2 class="A">Fixture</h2></div>
-        <ol class="time rv">
-          <li><span class="f">Fecha 1 · 09:30 h · Cancha 3</span><div class="m A">Cerveceros 2 <em>—</em> 4 Pancuca</div></li>
-          <li><span class="f">Fecha 2 · 09:30 h · Cancha 3</span><div class="m A">Jamaica 3 <em>—</em> 2 Cerveceros</div></li>
-          <li class="win"><span class="f">Fecha 3 · 09:30 h · Cancha 3</span><div class="m A">Floresta FC 1 <em>—</em> 3 Cerveceros</div><span class="d">La primera del Clausura.</span></li>
-          <li><span class="f">Fecha 4 · 11:10 h · Cancha 3</span><div class="m A">Gandulfa 2 <em>—</em> 0 Cerveceros</div></li>
-          <li><span class="f">Fecha 5</span><div class="m A">Selección K20 3 <em>—</em> 2 Cerveceros</div></li>
-        </ol>
+        <div class="rv" id="fixture"></div>
+        <a class="more" href="partidos.html">Fixture completo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
-      <div class="end rv" style="padding-top:20px">
-        <h2 class="A">Seguinos</h2>
-        <p>Resultados, fotos y la tabla de cada fecha, todo en un solo link para compartir con el equipo y la hinchada.</p>
-        <a class="wide" href="https://www.instagram.com/cerveceros.futbol/" target="_blank" rel="noopener">@cerveceros.futbol <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <div class="rv">
+        <div class="title"><h2 class="A">Noticias</h2></div>
+        <div id="noticias"></div>
+        <a class="more" id="noticias-mas" href="noticias.html">Todas las noticias <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
+    </div>
+  </section>
+
+  <section class="sec pt0">
+    <div class="wrap end rv">
+      <h2 class="A">Seguinos</h2>
+      <p>Resultados, fotos y la tabla de cada fecha, todo en un solo link para compartir con el equipo y la hinchada.</p>
+      <a class="wide" id="ig" href="https://www.instagram.com/cerveceros.futbol/" target="_blank" rel="noopener"><span id="ig-txt">@cerveceros.futbol</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
   </section>
 
   <section class="quote stripes">
     <div class="wrap rv">
       <p class="A">Maradona hubo <span>uno solo.</span></p>
-      <small>Cerveceros · Torneo Abierto UTN</small>
+      <small>CRVC · Cerveceros · Torneo Abierto UTN</small>
     </div>
   </section>
 </main>
 
-<footer><div class="wrap"><span>Cerveceros · Torneo Abierto UTN · Categoría B</span><span>Muestra · Diseño web: <a href="https://pazstudio.com.ar" target="_blank" rel="noopener">Paz Studio</a></span></div></footer>
+<footer id="pie"></footer>
 
-<script>
-(function(){
-  var reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
-  function count(el){ var n=+el.dataset.n; if(reduce||!n) return; var i=0; el.textContent="0"; var t=setInterval(function(){ i++; el.textContent=i; if(i>=n) clearInterval(t); },60); }
-  if("IntersectionObserver" in window){
-    var io=new IntersectionObserver(function(es){es.forEach(function(e){ if(!e.isIntersecting) return; e.target.classList.add("in"); e.target.querySelectorAll("[data-n]").forEach(count); io.unobserve(e.target); });},{threshold:.15});
-    document.querySelectorAll(".rv").forEach(function(el){io.observe(el)});
-  } else document.querySelectorAll(".rv").forEach(function(el){el.classList.add("in")});
-})();
-</script>
+<script src="js/comun.js" defer></script>
+<script src="js/inicio.js" defer></script>
 </body>
 </html>

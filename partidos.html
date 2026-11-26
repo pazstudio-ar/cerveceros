@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Fixture y resultados · Cerveceros</title>
+<meta name="description" content="Fixture, resultados y números de Cerveceros en el Torneo Abierto UTN.">
+<meta name="theme-color" content="#0E1D37">
+<meta property="og:title" content="Fixture y resultados · Cerveceros">
+<meta property="og:description" content="Fixture, resultados y números de Cerveceros en el Torneo Abierto UTN.">
+<meta property="og:image" content="https://pazstudio-ar.github.io/cerveceros/img/jugador.jpg">
+<meta property="og:url" content="https://pazstudio-ar.github.io/cerveceros/partidos.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<link rel="icon" href="img/escudo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body data-pagina="partidos">
+
+<div class="ticker" id="ticker" aria-hidden="true"></div>
+<header class="nav" id="nav"></header>
+  <section class="banner">
+    <div class="wrap">
+      <small>Fecha a fecha</small>
+      <h1 class="A">Fixture</h1>
+      <p>Todas las fechas con día, horario y cancha, y el resultado de cada partido.</p>
+    </div>
+  </section>
+
+<main class="sec">
+  <div class="wrap">
+    <div class="barra" id="barra">
+      <div><label for="sel-torneo">Torneo</label><select id="sel-torneo"></select></div>
+      <div class="racha" id="racha"></div>
+    </div>
+    <div id="contenido"></div>
+  </div>
+</main>
+
+<footer id="pie"></footer>
+
+<script src="js/comun.js" defer></script>
+<script src="js/partidos.js" defer></script>
+</body>
+</html>
